@@ -1,4 +1,4 @@
-const quotes = [
+quotes = [
     "Жизнь — это то, что происходит, пока вы заняты строить другие планы. — Джон Леннон",
     "Не бойтесь быть медленными; бойтесь оставаться на месте. — Китайская пословица",
     "Успех — это не конечная точка, неудача — это не фатально: важно только мужество продолжать. — Уинстон Черчилль",
@@ -7,15 +7,15 @@ const quotes = [
     "Не бей по тормозам на разгоне - кент"
 ];
 
-const quoteElement = document.getElementById('quote');
-const historyElement = document.getElementById('history');
+quoteElement = document.getElementById('quote');
+historyElement = document.getElementById('history');
 
 function getRandomQuote() {
     return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 function displayQuote() {
-    const quote = getRandomQuote();
+    quote = getRandomQuote();
     quoteElement.textContent = quote;
 
     const historyItem = document.createElement('li');
