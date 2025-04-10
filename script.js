@@ -20,7 +20,7 @@ function displayquote() {
     quoteel.textContent = quote;
 
     history = document.createElement('li');
-    history.textContent = quote;
+    historyItem.textContent = quote;
     historyel.appendChild(history);
 }
 
