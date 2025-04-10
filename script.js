@@ -21,7 +21,7 @@ function displayquote() {
 
     history = document.createElement('li');
     history.textContent = quote;
-    historyel.appendChild(historyItem);
+    historyel.appendChild(history);
 }
 
 document.getElementById('copy-quote').addEventListener('click', () => {
