@@ -8,8 +8,8 @@ quotes = [
     "Взял ножик — реж, взял дошик — ешь — Одноклассник"
 ];
 
-quoteElement = document.getElementById('quote');
-historyElement = document.getElementById('history');
+quoteEl = document.getElementById('quote');
+historyEl = document.getElementById('history');
 
 function randomquote() {
     return quotes[Math.floor(Math.random() * quotes.length)];
@@ -17,15 +17,15 @@ function randomquote() {
 
 function displayQuote() {
     quote = randomquote();
-    quoteElement.textContent = quote;
+    quoteEl.textContent = quote;
 
     historyItem = document.createElement('li');
     historyItem.textContent = quote;
-    historyElement.appendChild(historyItem);
+    historyEl.appendChild(historyItem);
 }
 
 document.getElementById('copy-quote').addEventListener('click', () => {
-    navigator.clipboard.writeText(quoteElement.textContent).then(() => {
+    navigator.clipboard.writeText(quoteEl.textContent).then(() => {
         alert('Цитата скопирована в буфер обмена!');
     });
 });
