@@ -11,12 +11,12 @@ quotes = [
 quoteElement = document.getElementById('quote');
 historyElement = document.getElementById('history');
 
-function getRandomQuote() {
+function randomquote() {
     return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 function displayQuote() {
-    quote = getRandomQuote();
+    quote = randomquote();
     quoteElement.textContent = quote;
 
     historyItem = document.createElement('li');
